@@ -1,11 +1,7 @@
-autoform-markdown
+autoform-markdown-editor
 ========
 
-A simple markdown textarea with preview using perak:markdown
-
-Demo
------
-Checkout http://autoform-markdown.meteor.com/
+A github like markdown editor using autoform and perak:markdown
 
 Usage
 -----
@@ -13,14 +9,11 @@ Usage
 Add a custom template in your Schema
 
 ```
-Schemas.Quest = new SimpleSchema({
-  title: {
-    type: String
-  },
-  text: {
+Schemas.Task = new SimpleSchema({
+  description: {
     type: String,
     autoform: {
-      type: 'markdown'
+      type: 'markdownEditor'
     }
   }
 });
