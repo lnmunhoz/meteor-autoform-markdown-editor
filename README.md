@@ -1,14 +1,20 @@
 autoform-markdown-editor
-========
-
+----
 A github like markdown editor using autoform and perak:markdown
+
+Install
+----
+```
+meteor add lnmunhoz:autoform-markdown-editor
+```
+
 
 Usage
 -----
 
 Add a custom template in your Schema
 
-```
+```js
 Schemas.Task = new SimpleSchema({
   description: {
     type: String,
@@ -19,13 +25,7 @@ Schemas.Task = new SimpleSchema({
 });
 ```
 
-Render markdown text using the renderMarkdown helper in your template
+License
+----
 
-```
-<template name="quest">
-  <h1>{{title}}</h1>
-  {{{renderMarkdown text}}}
-</template>
-```
-
-For more info and usage see: https://github.com/chjj/marked#usage
+[MIT License](http://lnmunhoz.mit-license.org) © Lucas N. Munhoz
