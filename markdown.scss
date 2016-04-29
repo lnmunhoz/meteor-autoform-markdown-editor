@@ -1,0 +1,48 @@
+[data-template="bootstrap-markdown-editor"] {
+  .tab-pane {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+  }
+  .markdown-write,
+  .markdown-preview {
+    width: 100%;
+    min-height: 150px;
+    display: inline-block;
+    .form-control {
+      flex: 1;
+    }
+  }
+  .markdown-container {
+    display: flex;
+    .markdown-preview {
+      display: inherit;
+      text-align: left;
+      flex-direction: column;
+      h1,
+      h2,
+      h3 {
+        margin-top: 0px;
+      }
+      .form-control {
+        display: block;
+        min-height: 150px;
+        height: 100%;
+        padding-right: 35px;
+      }
+    }
+    .markdown-write {
+      display: inherit;
+      float: left;
+      .form-control {
+        background-color: #FAFAFA;
+        min-height: 150px;
+        resize: vertical;
+        overflow: auto;
+      }
+    }
+  }
+  .panel .markdown-write.translatable img {
+    right: -100%;
+  }
+}

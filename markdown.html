@@ -1,0 +1,24 @@
+<template name="afMarkdownEditor">
+  <div data-template="bootstrap-markdown-editor">
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="active"><a href="#write" data-toggle="tab">Write</a></li>
+      <li ><a href="#preview" data-toggle="tab">Preview</a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="write" class="tab-pane active" >
+        <div class="markdown-container">
+          <section class="markdown-write">
+            <textarea class="form-control markdownInput" {{atts}}>{{value}}</textarea>
+          </section>
+        </div>
+      </div>
+      <div id="preview" class="tab-pane" >
+        <div class="markdown-container">
+          <section class="markdown-preview">
+            <span class="form-control"> {{{markdownText}}} </span>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
