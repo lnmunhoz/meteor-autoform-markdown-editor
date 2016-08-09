@@ -11,8 +11,11 @@ Template.registerHelper('renderMarkdown', function renderMarkdown(value) {
     return marked(value);
 });
 
+
+
 Template.afMarkdownEditor.created = function() {
   this.markdownInput = new ReactiveVar('');
+  this.tabActive = new ReactiveVar('#write')
 };
 
 Template.afMarkdownEditor.rendered = function() {
@@ -23,6 +26,9 @@ Template.afMarkdownEditor.rendered = function() {
 Template.afMarkdownEditor.helpers({
   markdownText: function() {
     return marked(Template.instance().markdownInput.get());
+  },
+  isTabActive: function(tabRef) {
+    return Template.instance().tabActive.get() === tabRef
   }
 });
 
@@ -68,5 +74,8 @@ Template.afMarkdownEditor.events({
     textArea.selection('replace', { text: header + selectedText });
     $(evt.currentTarget).prop('selectedIndex',0);
     instance.markdownInput.set(textArea.val());
+  },
+  'click .nav-tabs li': function(event, template) {
+    template.tabActive.set(event.target.attributes.href.value)
   }
 });

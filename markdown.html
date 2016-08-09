@@ -1,18 +1,18 @@
 <template name="afMarkdownEditor">
   <div data-template="bootstrap-markdown-editor">
     <ul class="nav nav-tabs" role="tablist">
-      <li class="active"><a href="#write" data-toggle="tab">Write</a></li>
-      <li ><a href="#preview" data-toggle="tab">Preview</a></li>
+      <li class="{{#if isTabActive '#write'}} active {{/if}}"><a href="#write" >Write</a></li>
+      <li class="{{#if isTabActive '#preview'}} active {{/if}}"><a href="#preview">Preview</a></li>
     </ul>
     <div class="tab-content">
-      <div id="write" class="tab-pane active" >
+      <div id="write" class="tab-pane {{#if isTabActive '#write'}} active {{/if}}" >
         <div class="markdown-container">
           <section class="markdown-write">
             <textarea class="form-control markdownInput" {{atts}}>{{value}}</textarea>
           </section>
         </div>
       </div>
-      <div id="preview" class="tab-pane" >
+      <div id="preview" class="tab-pane {{#if isTabActive '#preview'}} active {{/if}}" >
         <div class="markdown-container">
           <section class="markdown-preview">
             <span class="form-control"> {{{markdownText}}} </span>
