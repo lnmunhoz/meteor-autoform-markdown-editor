@@ -12,9 +12,9 @@ Package.onUse(function(api) {
   api.use(['perak:markdown@1.0.5', 'aldeed:autoform@5.4.1', 'fourseven:scss@3.4.3'], 'client');
   api.addFiles([
     'markdown.html',
-    'markdown.scss',
     'jquery.selection.js',
-    'markdown.js'
+    'markdown.js',
+    'markdown.css'
   ], 'client');
 
 });

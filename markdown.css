@@ -1,0 +1,43 @@
+[data-template="bootstrap-markdown-editor"] .tab-pane {
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+}
+[data-template="bootstrap-markdown-editor"] .markdown-write,
+[data-template="bootstrap-markdown-editor"] .markdown-preview {
+  width: 100%;
+  min-height: 150px;
+  display: inline-block;
+}
+[data-template="bootstrap-markdown-editor"] .markdown-write .form-control,
+[data-template="bootstrap-markdown-editor"] .markdown-preview .form-control {
+  flex: 1;
+}
+[data-template="bootstrap-markdown-editor"] .markdown-container {
+  display: flex;
+}
+[data-template="bootstrap-markdown-editor"] .markdown-container .markdown-preview {
+  display: inherit;
+  text-align: left;
+  flex-direction: column;
+}
+[data-template="bootstrap-markdown-editor"] .markdown-container .markdown-preview h1,
+[data-template="bootstrap-markdown-editor"] .markdown-container .markdown-preview h2,
+[data-template="bootstrap-markdown-editor"] .markdown-container .markdown-preview h3 {
+  margin-top: 0px;
+}
+[data-template="bootstrap-markdown-editor"] .markdown-container .markdown-preview .form-control {
+  display: block;
+  min-height: 300px;
+  height: 100%;
+  padding-right: 35px;
+}
+[data-template="bootstrap-markdown-editor"] .markdown-container .markdown-write {
+  display: inherit;
+  float: left;
+}
+[data-template="bootstrap-markdown-editor"] .markdown-container .markdown-write .form-control {
+  background-color: #FAFAFA;
+  min-height: 300px;
+  resize: vertical;
+  overflow: auto;
+}
