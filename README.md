@@ -23,7 +23,10 @@ Schemas.Task = new SimpleSchema({
     }
   }
 });
+
 ```
+
+![demo](http://g.recordit.co/edwBuvFkUp.gif)
 
 License
 ----
